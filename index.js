@@ -3,19 +3,19 @@ var COUNTER = 0;
 
 function hehe(block) {
   var body = markdown.page(block.body).content;
-  var blocks = block.blocks.filter(function (subBlock) {
-    return subBlock;
-  });
-  var blockBody = block.blocks.map(function (subBlock) {
-    return subBlock.name + '<br>' + markdown.page(subBlock).content;
-  }).join('<br><br>');
+  // var blocks = block.blocks.filter(function (subBlock) {
+  //   return subBlock;
+  // });
+  // var blockBody = block.blocks.map(function (subBlock) {
+  //   return subBlock.name + '<br>' + markdown.page(subBlock).content;
+  // }).join('<br><br>');
 
 
   return `
-      <div>
-        ${body}
-      </div>
-    `;
+    <div>
+      ${body}
+    </div>
+  `;
 }
 function kitchenSink(block) {
   var isFirstTab = true;

@@ -1,7 +1,7 @@
 {
   "name": "gitbook-plugin-tabs",
   "description": "Clickable tabs for Gitbook pages",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "MIT",
   "main": "index.js",
   "engines": {

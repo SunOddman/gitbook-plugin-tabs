@@ -6,15 +6,12 @@ function hehe(block) {
   var blocks = block.blocks.filter(function (subBlock) {
     return subBlock;
   });
-  var blockBody = blocks.map(function (subBlock) {
+  var blockBody = block.blocks.map(function (subBlock) {
     return subBlock.name + '<br>' + markdown.page(subBlock).content;
   }).join('<br><br>');
 
 
   return `
-      <div>
-        ${body}
-      </div>
       <div>
         ${blockBody}
       </div>

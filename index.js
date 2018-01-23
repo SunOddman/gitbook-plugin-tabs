@@ -10,8 +10,8 @@ function hehe(block) {
   var rightBody = markdown.page(block.blocks[1].body).content;
 
   return `
+    ${body}
     <div class="class-multi-columns">
-      ${body}
       <div class="column-left">
       ${leftBody}
       </div>

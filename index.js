@@ -2,7 +2,23 @@ var markdown = require('gitbook-markdown');
 var COUNTER = 0;
 
 function hehe(block) {
-  return markdown.page(block.body).content;
+  var body = markdown.page(block.body).content;
+  var blocks = block.blocks.filter(function (subBlock) {
+    return subBlock;
+  });
+  var blockBody = blcoks.map(function (subBlock) {
+    return subBlock.name + '<br>' + markdown.page(subBlock).content;
+  }).join('<br><br>');
+
+
+  return `
+      <div>
+        ${body}
+      </div>
+      <div>
+        ${blockBody}
+      </div>
+    `;
 }
 function kitchenSink(block) {
   var isFirstTab = true;
@@ -75,6 +91,7 @@ module.exports = {
       }
     },
     testTab: {
+      blocks: ['testTab1', 'testTab2'],
       process: function (block) {
         return hehe(block);
       }

@@ -6,9 +6,9 @@ function hehe(block) {
   // var blocks = block.blocks.filter(function (subBlock) {
   //   return subBlock;
   // });
-  // var blockBody = block.blocks.map(function (subBlock) {
-  //   return subBlock.name + '<br>' + markdown.page(subBlock).content;
-  // }).join('<br><br>');
+  var blockBody = block.blocks.map(function (subBlock) {
+    return subBlock.name + '<br>' + markdown.page(subBlock).content;
+  }).join('<br><br>');
 
 
   return `

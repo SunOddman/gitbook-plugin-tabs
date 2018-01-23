@@ -77,7 +77,8 @@ module.exports = {
   book: {
     assets: './assets',
     css: [
-      'bootstrap.css'
+      'bootstrap.css',
+      'multi_column.css'
     ],
     js: [
       'bootstrap.js'

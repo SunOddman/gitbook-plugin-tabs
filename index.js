@@ -6,14 +6,18 @@ function hehe(block) {
   // var blocks = block.blocks.filter(function (subBlock) {
   //   return subBlock;
   // });
-  var blockBody = block.blocks.map(function (subBlock) {
-    return markdown.page(subBlock.body).content;
-  });
-
+  var leftBody = markdown.page(block.blocks[0].body).content;
+  var rightBody = markdown.page(block.blocks[1].body).content;
 
   return `
-    <div>
+    <div class="multi-column">
       ${body}
+      <div class="column-left">
+      ${leftBody}
+      </div>
+      <div class="column-right">
+      ${rightBody}
+      </div>
     </div>
   `;
 }
@@ -88,7 +92,7 @@ module.exports = {
       }
     },
     testTab: {
-      blocks: ['testTab1', 'testTab2'],
+      blocks: ['left', 'right'],
       process: function (block) {
         return hehe(block);
       }

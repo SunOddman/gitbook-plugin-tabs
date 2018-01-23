@@ -7,7 +7,7 @@ function hehe(block) {
   //   return subBlock;
   // });
   var blockBody = block.blocks.map(function (subBlock) {
-    return subBlock.name + '<br>' + markdown.page(subBlock).content;
+    return markdown.page(subBlock).content;
   }).join('<br><br>');
 
 

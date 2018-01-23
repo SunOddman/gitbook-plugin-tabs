@@ -8,7 +8,7 @@ function hehe(block) {
   // });
   var blockBody = block.blocks.map(function (subBlock) {
     return markdown.page(subBlock).content;
-  }).join('<br><br>');
+  });
 
 
   return `

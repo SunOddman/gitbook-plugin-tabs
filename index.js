@@ -1,6 +1,9 @@
 var markdown = require('gitbook-markdown');
 var COUNTER = 0;
 
+function hehe(block) {
+  return markdown.page(block.body).content;
+}
 function kitchenSink(block) {
   var isFirstTab = true;
 
@@ -69,6 +72,11 @@ module.exports = {
       blocks: ['tab1', 'tab2', 'tab3', 'tab4', 'tab5', 'tab6', 'tab7', 'tab8', 'tab9', 'tab10'],
       process: function(block) {
         return kitchenSink(block);
+      }
+    },
+    testTab: {
+      process: function (block) {
+        return hehe(block);
       }
     }
   }

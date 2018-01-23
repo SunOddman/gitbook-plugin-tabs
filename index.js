@@ -13,7 +13,7 @@ function hehe(block) {
 
   return `
       <div>
-        ${blockBody}
+        ${body}
       </div>
     `;
 }
